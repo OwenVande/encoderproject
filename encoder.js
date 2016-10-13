@@ -5,7 +5,7 @@ $("input[type='radio']").click(function(e){
   $(this).prop('checked',false);
 });
 
-  var alphabet = {
+  var alphabet = { //english alphabet
     65: "a",
     66: "b",
     67: "c",
@@ -32,11 +32,11 @@ $("input[type='radio']").click(function(e){
     88: "x",
     89: "y",
     90: "z",
-    8: "",
+    //8: "",
     32: " ",
   }
 
-  var cipher = {
+  var cipher = { //cipher alphabet
     65: "z",
     66: "a",
     67: "b",
@@ -63,11 +63,11 @@ $("input[type='radio']").click(function(e){
     88: "w",
     89: "x",
     90: "y",
-    8: "",
+    //8: "",
     32: " ",
   }
 
-  var heiroglyphics = {
+  var heiroglyphics = { //heiroglyhic alphabet
     65: "<img src='images/heiroglyphics/a.gif'>",
     66: "<img src='images/heiroglyphics/b.gif'>",
     67: "<img src='images/heiroglyphics/c.gif'>",
@@ -94,11 +94,11 @@ $("input[type='radio']").click(function(e){
     88: "<img src='images/heiroglyphics/x.gif'>",
     89: "<img src='images/heiroglyphics/y.gif'>",
     90: "<img src='images/heiroglyphics/z.gif'>",
-    8: "",
+    //8: "",
     32: " ",
   }
 
-  var runes = {
+  var runes = { // rune alphabet
     65: "<img src='images/runes/a.gif'>",
     66: "<img src='images/runes/b.gif'>",
     67: "<img src='images/runes/c.gif'>",
@@ -125,11 +125,15 @@ $("input[type='radio']").click(function(e){
     88: "<img src='images/runes/x.gif'>",
     89: "<img src='images/runes/y.gif'>",
     90: "<img src='images/runes/z.gif'>",
-    8: "",
+    //8: "",
     32: " ",
   }
 
-  if ($("input:checked").val()=="echo"){ //if echo is selected
+  if (e.keyCode == 8){ //backspace
+    document.getElementById('textArea').textContent = document.getElementById('textArea').textContent.substr(0, document.getElementById('textArea').textContent.length - 1);
+  }
+
+  else if ($("input:checked").val()=="echo"){ //if echo is selected
     document.getElementById("textArea").innerHTML += alphabet[e.keyCode];
   }
 
