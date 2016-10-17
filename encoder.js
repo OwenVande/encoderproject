@@ -149,48 +149,49 @@ $("input[type='radio']").click(function(e){
     document.getElementById("textArea").innerHTML += runes[e.keyCode];
   }
 
-})
+});
 
-function run1(){
+function run1(){ //clear area with text
   document.getElementById("textArea").innerHTML = "";
 }
 
-document.getElementById("translationInputArea").addEventListener("keydown",function(d){
+function run2() { //decoder
 
-  if (d.keyCode == 8){ //backspace
-    document.getElementById('translationArea').textContent = document.getElementById('translationArea').textContent.substr(0, document.getElementById('translationArea').textContent.length - 1);
-  }
-  var decoder = {
-    65: "a",
-    66: "b",
-    67: "c",
-    68: "d",
-    69: "e",
-    70: "f",
-    71: "g",
-    72: "h",
-    73: "i",
-    74: "j",
-    75: "k",
-    76: "l",
-    77: "m",
-    78: "n",
-    79: "o",
-    80: "p",
-    81: "q",
-    82: "r",
-    83: "s",
-    84: "t",
-    85: "u",
-    86: "v",
-    87: "w",
-    88: "x",
-    89: "y",
-    90: "z",
-    //8: "",
-    32: " ",
-  }
+  var decoder = { //decoder alphabet
+      "z": "a",
+      "a": "b",
+      "b": "c",
+      "c": "d",
+      "d": "e",
+      "e": "f",
+      "f": "g",
+      "g": "h",
+      "h": "i",
+      "i": "j",
+      "j": "k",
+      "k": "l",
+      "l": "m",
+      "m": "n",
+      "n": "o",
+      "o": "p",
+      "p": "q",
+      "q": "r",
+      "r": "s",
+      "s": "t",
+      "t": "u",
+      "u": "v",
+      "v": "w",
+      "w": "x",
+      "x": "y",
+      "y": "z",
+      "": "",
+      " ": " ",
+    }
 
-  document.getElementById("translationArea").innerHTML += decoder[d.keyCode];
+  var messageToDecode = document.getElementById("translationInputText").value;
+  var messageArray = messageToDecode.split("");
+  for(i = 0; i < messageArray.length; i++){
+  document.getElementById("translationArea").innerHTML += decoder[messageArray[i]];
+}
 
-});
+}
