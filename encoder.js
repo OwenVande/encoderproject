@@ -33,7 +33,7 @@ $("input[type='radio']").click(function(e){
     89: "y",
     90: "z",
     190: ".",
-
+    16: "",
     //8: "",
     32: " ",
   }
@@ -67,6 +67,7 @@ $("input[type='radio']").click(function(e){
     90: "y",
     //8: "",
     190: ".",
+    16: "",
     32: " ",
   }
 
@@ -99,6 +100,7 @@ $("input[type='radio']").click(function(e){
     90: "<img src='images/heiroglyphics/z.gif'>",
     //8: "",
     32: " ",
+    16: "",
     190: ".",
   }
 
@@ -132,6 +134,7 @@ $("input[type='radio']").click(function(e){
     //8: "",
     32: " ",
     190: ".",
+    16: "",
   }
 
   if (e.keyCode == 8){ //backspace
