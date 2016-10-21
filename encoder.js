@@ -32,6 +32,8 @@ $("input[type='radio']").click(function(e){
     88: "x",
     89: "y",
     90: "z",
+    190: ".",
+
     //8: "",
     32: " ",
   }
@@ -64,6 +66,7 @@ $("input[type='radio']").click(function(e){
     89: "x",
     90: "y",
     //8: "",
+    190: ".",
     32: " ",
   }
 
@@ -96,6 +99,7 @@ $("input[type='radio']").click(function(e){
     90: "<img src='images/heiroglyphics/z.gif'>",
     //8: "",
     32: " ",
+    190: ".",
   }
 
   var runes = { // rune alphabet
@@ -127,6 +131,7 @@ $("input[type='radio']").click(function(e){
     90: "<img src='images/runes/z.gif'>",
     //8: "",
     32: " ",
+    190: ".",
   }
 
   if (e.keyCode == 8){ //backspace
@@ -186,6 +191,7 @@ function run2() { //decoder
       "y": "z",
       "": "",
       " ": " ",
+      ".":".",
     }
 
   var messageToDecode = document.getElementById("translationInputText").value;
